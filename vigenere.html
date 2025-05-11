@@ -14,7 +14,54 @@
         <img src="supp/vigenere.png" width="600px" height="300px">
         <figcaption><pre>                         Credit: Library of Congress</pre></figcaption>
     </figure>
-    <p> PLACEHOLDER
+    <p> The vigenere cipher can be thought of as a better form of a Caesar cipher, a cipher that
+      encodes plaintext by shifting letters a fixed distance down the alphabet (famously used
+      by Caesar himself). While the Caesar cipher shifts letters down the same amount for any 
+      letter, the vigenere cipher shifts letters down based on a repeated codeword.
+    </p>
+    <p> To encrypt using the vigenere cipher, the plaintext is first written out. Then, a selected
+      codeword is written over the plaintext, with each letter of the codeword matching each letter
+      of the plaintext. For example, if the codeword was "EVERY" and the plaintext was "grandpa", the 
+      letters would be overlaid like this.
+      <pre>|E|V|E|R|Y|E|V|
+   |g|r|a|n|d|p|a|
+      </pre>
+    </p>
+    <p> This is how the cipher decides how much it shifts letters down the alphabet: using the codeword. 
+      In the example that Thomas Jefferson sent to Lewis and Clark, if the letter of the codeword above 
+      a plaintext letter was "A", then the plaintext letter would be shifted down once ("a" would become
+      "b", "b" would become "c", and "z" would become "a.") However, this would be quite tedious when long
+      messsages would have to be encrypted. This is where the vigenere tableau comes in. As you can see in 
+      the image above, the vigenere tableau is a matrix with rows and columns. The columns represent plaintext,
+      while the rows represent the repeated codeword. This tableau's rows contain various Caesar ciphers with
+      different shifts down the alphabet, helping to reduce the work needed a little bit. 
+    </p>
+    <p> One advantage of the vigenere cipher is that it is hard to crack using frequency analysis, a method
+      of decoding substitution ciphers by finding the frequencies the words appear in. For example, a simple
+      Caesar cipher that shifted "e" to "f" would be easily broken using frequency analysis. Decrypters would
+      find that "f" appeared as frequently in the ciphertext as "e" does in normal text. They would then repeat 
+      this analysis on other letters and find what each letter mapped to. However, vigenere encrypts letters in 
+      many different ways due to its codeword. Thus, what the frequencies map to is less obvious; the appearances 
+      of "e" or other letters are spread among many different encrypted letters. 
+    </p>
+    <h2>Breaking the Vigenere Cipher</h2>
+    <p> While the cipher would've worked for Lewis and Clark, you should definitely not use it to encrypt 
+      your secrets now! The cipher was broken with the ingenuity of Charles Babbage in 1854, though his findings
+      were only published in the 1970s, decades after his death. The principle behind his solution is that 
+      while the vigenere cipher decreased repetitions in the plaintext, the codeword cycled, meaning that a repetition
+      would be inevitable. Thus, an improved frequency analysis could still break the cipher. 
+    </p>
+    <p> Cracking the cipher begins with analyzing repeated sequences in the ciphertext in order to find possible lengths
+      of the codeword. For example, if the letters "BIY" are repeated and the distance between the end of the first occurrence
+      and the end of the second occurrence is 35, the codeword's length could be 5 or 7. We repeat this analysis of repeated 
+      sequences for each repetition, helping us find a set of possible codeword lengths. The more sequences where a length 
+      is possible, the more likely that the codeword has that length. 
+    </p>
+    <p> Now that we know the length, we can finally do our trusty frequency analysis! This is because we now know which letters
+      of the ciphertext are encrypted by which part of the codeword. For example, if the codeword's length is 7, that means that 
+      the first, eighth, fifteenth, etc. are encrypted by the first part of the codeword. So, as those letters are effectively
+      encrypted with a Caesar cipher, we can crack them using simple frequency analysis. We then repeat for each codeword letter 
+      to get the plaintext. 
     </p>
     <p>You can go back to the index with <a href="index.html">this link</a>.</p>
   </body>

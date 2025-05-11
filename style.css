@@ -8,13 +8,23 @@ box-sizing: border-box;
 
 h1 {
     padding: 10px 20px;
-    color: #FFFFFF;
+    color: #CCCCCC;
+}
+h2 {
+    padding: 10px 20px;
+    color: #CCCCCC;
 }
 p {
     padding: 7px 20px;
     text-indent: 25px;
     line-height: 1.8;
-    color: #FFFFFF;
+    color: #CCCCCC;
+}
+pre {
+    padding: 7px 20px;
+    text-indent: 25px;
+    line-height: 1.8;
+    color: #CCCCCC;
 }
 .content > * {
     color: #000000;
