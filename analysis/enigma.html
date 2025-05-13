@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="/_vercel/insights/script.js"></script>
+    <title>History Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <h1>The Enigma</h1>
+    <figure>
+        <img src="../supp/enigma.jpeg" width="300px" height="370px">
+        <figcaption><pre>Source: ResearchGate</pre></figcaption>
+    </figure>
+    <p> The enigma was created to try to thwart frequency analysis, the bane of all polyalphabetic
+        substitution ciphers. Since no frequencies could be found in a cipher that made its 
+        encrypted outputs purely random, these "rotor machines" were being made by inventors 
+        to make their outputs more purely random, and make repetitions much less common. 
+    </p>
+    <p> The enigma was the machine that protected Nazi Germany's most important secrets, 
+        and both the invention itself and the decoding of its code were extremely important 
+        to the field of cryptography. Originally used to encode banking secrets, this machine 
+        became used to encrypt military information as well. Its multiple settings allowed for
+        158 quintillion different encryption methods, making it nearly impossible to perform
+        a "brute force" (trying every possibility) attack. 
+    </p>
+    <p> The enigma achieved this using its rotors and plugboard. The machine had five rotors,
+        though only three could be set to be used at a time. Each combination of orientations 
+        for the active three rotors (which had 26 positions for each letter) represented one 
+        distinct cryptography scheme. Each rotor was its own sort of Caesar cipher, shifting 
+        letters down the alphabet. However, there were three of these ciphers, with the first
+        linking its output to the second, and the second linking its output to the third. After 
+        the typed letter went through the three rotors, it would go back, becoming the third 
+        rotor's input so that the letter would go back out in another direction. Additionally,
+        as a letter was typed, the leftmost rotor would rotate once till it reached its original
+        position, after which the next rotor would rotate. The last rotor would rotate once the
+        second rotor completed a full revolution. 
+    </p>
+    <p> The plugboard added an entire layer of complexity onto the already complex system. A total
+        of 13 tubes could be wired between the 26 holes in the plugboard that represented each 
+        letter. These tubes would substitute both the input and the output; typing the letter 'F'
+        could make it substitute into 'C' if 'F' and 'C' were linked, and the enigma outputting 
+        the letter 'M' could make it substitute into 'B' if 'M' and 'B' were linked. 
+    </p>
+    <p> Going back to that 158 quintillion statistic, we can multiply the different possibilities 
+        created by each part. The three active rotors of the machine had 26 * 26 * 26 possible 
+        starting arrangements, making 17576 combinations. There would also be 5P3 = 60 ways to choose 
+        rotors and the rotor order. The plugboard increased the combination drastically, with 150 
+        trillion ways to connect the different parts of the keyboard. Finally, we multiply them to get
+        17576 * 150000000000000 * 60 equals 158 quintillion combinations.
+    </p>
+    <h2>Cracking the Enigma</h2>
+    <figure>
+        <img src="../supp/bomba.jpg" width="300px" height="370px">
+        <figcaption><pre>Source: Marian Rejewski</pre></figcaption>
+    </figure>
+    <p> 
+    </p>
+    <p>You can go back to the index with <a href="../index.html#enigma">this link</a>.</p>
+  </body>
+</html>
