@@ -14,7 +14,41 @@
         <img src="../supp/routecipher.png" width="600px" height="400px">
         <figcaption><pre>Source: Me</pre></figcaption>
     </figure>
-    <p> Public-key cryptography is a major breakthrough for 
+    <p> Public-key cryptography is a major breakthrough for cryptography because it involves the 
+      use of multiple keys, a public key and a private key. Having a key that can be shared freely
+      and a key that is kept only to oneself, this area of cryptography has multiple different applications. 
+    </p>
+    <h2>Sending Messages</h2>
+    <p> Under a public-key system, anyone can send messages to someone if they know that person's 
+      public key, which they are able to know. However, these messages can only be read by the 
+      intended reader, so intercepters are unable to decode what the messages are. This is because 
+      the public and private keys are mathematically related to each other, so only the private key 
+      is able to decrypt the public key. 
+    </p>
+    <p> This system is advantageous in a variety of ways. Under a symmetric key (one key) system, 
+      both the sender and receiver must keep the cipher secret in order for intercepters not to 
+      decrypt messages. This is not always easy, especially if communication is scrutinized and 
+      it is difficult to privately tell someone the encryption key. Public-key cryptography changes 
+      this because the private key, the only key that needs to be protected in this system, does 
+      not need to be told to anyone. Only the public key needs to be told, and it doesn't need to be 
+      kept secret.
+    </p>
+    <h2>Digital Signatures</h2>
+    <p> Public-key cryptography can also be used to confirm that a piece of information is created 
+      by who it purports to be affilliated with. The text to be sent has a "signature" applied to 
+      it using a special program that takes the owner's private key. Then, people who know the author's 
+      public key are able to easily confirm that the information is signed by the author. However, 
+      forgers don't know the author's private key so they cannot sign text such that it returns the same 
+      thing when tested with the author's public key. 
+    </p>
+    <h2>Diffie-Hellman Key Exchange</h2>
+    <p> The Diffie-Hellman Key exchange uses public-key cryptography to create a single cipher, a 
+      "shared secret," but with all of the advantages of sending messages with "normal" public-key 
+      cryptography. Special parameters are agreed upon for new public keys, but these parameters 
+      do not give away the actual keys so they can be spoken in a scrutinized space. Then, these 
+      parameters are combined with each party's private key to create a public key, which still 
+      doesn't give away the keys. Finally, a shared secret is created by combining the public and 
+      private keys, without giving away the actual code to eavesdroppers. 
     </p>
     <p>You can go back to the index with <a href="../index.html#public">this link</a>.</p>
   </body>
