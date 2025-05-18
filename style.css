@@ -29,7 +29,12 @@ pre {
 .content > * {
     color: #000000;
 }
-
+.code > * {
+    color: #dddddd;
+}
+.code > h2 {
+    color: #11a611;
+}
 .timeline {
 position: relative;
 max-width: 1200px;

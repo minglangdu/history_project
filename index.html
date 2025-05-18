@@ -28,7 +28,20 @@
             places, and words. Unfortunately, numbers 277, 278, 279, and 617 are damaged and unreadable.</p>
         </div> 
         <div class = "content code">
-
+          <h2>Encryption</h2>
+          <form>
+            <label for="plaintext">Plaintext:</label><br>
+            <input type="text" name="plaintext" id="plaintext"> <br><br>
+            <input type="submit">
+          </form>
+          <p style="color:green" id="codescipher"></p>
+          <h2>Decryption</h2>
+          <form>
+            <label for="ciphertext">Ciphertext:</label><br>
+            <input type="text" name="ciphertext" id="ciphertext"> <br><br>
+            <input type="submit">
+          </form>
+          <p stype="color:red" id="codesplain"></p>
         </div>
         <div class = "content">
           <p> A processed (by me) list of these 763 codes can be downloaded <a href="supp/codes.json" download="filename">here</a>.
@@ -46,7 +59,24 @@
           </p>
         </div>
         <div class = "content code">
-          
+          <h2>Encryption</h2>
+          <form>
+            <label for="plaintext">Plaintext:</label><br>
+            <input type="text" name="plaintext" id="plaintext"> <br><br>
+            <label for="keyword">Keyword: </label> <br>
+            <input type="text" name="keyword" id="keyword"> <br><br>
+            <input type="submit">
+          </form>
+          <p style="color:green" id="vigenerecipher"></p>
+          <h2>Decryption</h2>
+          <form>
+            <label for="ciphertext">Ciphertext:</label><br>
+            <input type="text" name="ciphertext" id="ciphertext"> <br><br>
+            <label for="keyword">Keyword: </label> <br>
+            <input type="text" name="keyword" id="keyword"> <br><br>
+            <input type="submit">
+          </form>
+          <p stype="color:red" id="vigenereplain"></p>
         </div>
         <div class = "content">
           <p>You can find more in-depth analysis <a href="analysis/vigenere.html">here</a>.</p>
@@ -64,7 +94,24 @@
           </p>
         </div>
         <div class = "content code">
-          
+          <p>Note: I will be using a preset grid and route to encrypt the messages, but the Union
+            used multiple grid configurations and routes in their ciphers. I also will not be implementing
+            dummy words or substitutions, but the Union also used them.
+          </p>
+          <h2>Encryption</h2>
+          <form>
+            <label for="plaintext">Plaintext:</label><br>
+            <input type="text" name="plaintext" id="plaintext"> <br><br>
+            <input type="submit">
+          </form>
+          <p style="color:green" id="codescipher"></p>
+          <h2>Decryption</h2>
+          <form>
+            <label for="ciphertext">Ciphertext:</label><br>
+            <input type="text" name="ciphertext" id="ciphertext"> <br><br>
+            <input type="submit">
+          </form>
+          <p stype="color:red" id="codesplain"></p>
         </div>
         <div class="content">
           <h2>The Rail-Fence Cipher</h2>
@@ -76,7 +123,23 @@
           </p>
         </div>
         <div class = "content code">
-          
+          <p>Note: While the Rail-fence cipher could potentially have multiple rails, I am assuming that only 
+            two rails are used to put the characters on. 
+          </p>
+          <h2>Encryption</h2>
+          <form>
+            <label for="plaintext">Plaintext:</label><br>
+            <input type="text" name="plaintext" id="plaintext"> <br><br>
+            <input type="submit">
+          </form>
+          <p style="color:green" id="codescipher"></p>
+          <h2>Decryption</h2>
+          <form>
+            <label for="ciphertext">Ciphertext:</label><br>
+            <input type="text" name="ciphertext" id="ciphertext"> <br><br>
+            <input type="submit">
+          </form>
+          <p stype="color:red" id="codesplain"></p>
         </div>
         <div class="content">
           <p>You can find more in-depth analysis <a href="analysis/civilwar.html">here</a>.</p>
@@ -95,7 +158,23 @@
           </p>
         </div>
         <div class = "content code">
-
+          <p>Note: the plugboard is not implemented in this demo, only 3 rotors are used, 
+            and it is assumed that they start at position 'AAA.'
+          </p>
+          <h2>Encryption</h2>
+          <form>
+            <label for="plaintext">Plaintext:</label><br>
+            <input type="text" name="plaintext" id="plaintext"> <br><br>
+            <input type="submit">
+          </form>
+          <p style="color:green" id="codescipher"></p>
+          <h2>Decryption</h2>
+          <form>
+            <label for="ciphertext">Ciphertext:</label><br>
+            <input type="text" name="ciphertext" id="ciphertext"> <br><br>
+            <input type="submit">
+          </form>
+          <p stype="color:red" id="codesplain"></p>
         </div>
         <div class = "content">
           <p>You can find more in-depth analysis <a href="analysis/enigma.html">here</a>.</p>
