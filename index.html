@@ -29,20 +29,38 @@
         </div> 
         <div class = "content code">
           <h2>Encryption</h2>
-          <form>
+          <form id="e1f">
             <label for="plaintext">Plaintext:</label><br>
             <input type="text" name="plaintext" id="plaintext"> <br><br>
-            <input type="submit">
+            <input type="submit" onclick="encrypt1(); return false;">
           </form>
-          <p style="color:green" id="codescipher"></p>
+          <p style="color:rgb(177, 255, 177)" id="codescipher"></p>
           <h2>Decryption</h2>
-          <form>
+          <form id="d1f">
             <label for="ciphertext">Ciphertext:</label><br>
             <input type="text" name="ciphertext" id="ciphertext"> <br><br>
-            <input type="submit">
+            <input type="submit" onclick="decrypt1(); return false;"> 
+            <!-- return false stops submit to scroll -->
           </form>
           <p stype="color:red" id="codesplain"></p>
         </div>
+        <script>
+          function encrypt1() {
+            var form = document.getElementById("e1f");
+            var val = form.querySelector("#plaintext").value;
+            var out = document.getElementById("codescipher");
+            // placeholder
+            
+            out.innerHTML = val;
+          };
+          function decrypt1() {
+            var form = document.getElementById("d1f");
+            var val = form.querySelector("#ciphertext").value;
+            var out = document.getElementById("codesplain");
+            // placeholder
+            out.innerHTML = val;
+          }
+        </script>
         <div class = "content">
           <p> A processed (by me) list of these 763 codes can be downloaded <a href="supp/codes.json" download="filename">here</a>.
           </p>
@@ -67,7 +85,7 @@
             <input type="text" name="keyword" id="keyword"> <br><br>
             <input type="submit">
           </form>
-          <p style="color:green" id="vigenerecipher"></p>
+          <p style="color:rgb(177, 255, 177)" id="vigenerecipher"></p>
           <h2>Decryption</h2>
           <form>
             <label for="ciphertext">Ciphertext:</label><br>
@@ -104,7 +122,7 @@
             <input type="text" name="plaintext" id="plaintext"> <br><br>
             <input type="submit">
           </form>
-          <p style="color:green" id="codescipher"></p>
+          <p style="color:rgb(177, 255, 177)" id="codescipher"></p>
           <h2>Decryption</h2>
           <form>
             <label for="ciphertext">Ciphertext:</label><br>
@@ -132,7 +150,7 @@
             <input type="text" name="plaintext" id="plaintext"> <br><br>
             <input type="submit">
           </form>
-          <p style="color:green" id="codescipher"></p>
+          <p style="color:rgb(177, 255, 177)" id="codescipher"></p>
           <h2>Decryption</h2>
           <form>
             <label for="ciphertext">Ciphertext:</label><br>
@@ -167,7 +185,7 @@
             <input type="text" name="plaintext" id="plaintext"> <br><br>
             <input type="submit">
           </form>
-          <p style="color:green" id="codescipher"></p>
+          <p style="color:rgb(177, 255, 177)" id="codescipher"></p>
           <h2>Decryption</h2>
           <form>
             <label for="ciphertext">Ciphertext:</label><br>
